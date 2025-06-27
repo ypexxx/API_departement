@@ -1,12 +1,7 @@
-import os
-from flask import Flask, request, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Home"
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Gunakan PORT dari Railway
-    app.run(host="0.0.0.0", port=port)
+    return "Hello from Railway with Gunicorn!"
